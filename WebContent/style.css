@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+#pagntn
+{
+	margin-left:10px; 
+	background-color:#F0F0F0;
+	color:black;
+	border:1.5px solid lightgray;
+	
+}
+#currentDate
+{
+	margin-left:15px;
+}
+
+}
