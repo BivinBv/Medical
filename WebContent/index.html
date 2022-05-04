@@ -44,7 +44,7 @@
 <nav class="navbar navbar-expand-sm " id="secnav">
   <ul class="navbar-nav">
     <li class="nav-item">
-     <a href="#" class="btn btn-info-vital" role="button" id=btn>vital</a>  <!-- <a href="#" class="btn btn-info1" role="button" id=btn class="btn1" >Vital Table</a> -->
+     <a href="#" class="btn btn-info-vital" role="button" id=btn>Vitals Table</a>  <!-- <a href="#" class="btn btn-info1" role="button" id=btn class="btn1" >Vital Table</a> -->
     </li>
     <li class="nav-item">
      <a href="#" class="btn btn-info-graph" role="button" id=btn>Graphs</a>
@@ -123,6 +123,56 @@
 </nav>
 </div>																		<!-- sixth and seventh div ends -->
 
+<div>																			<!-- Eighth and Nine div starts -->
+<nav class="navbar navbar-expand-sm" id="eightnav">
+<ul class="navbar-nav">
+ <li class="nav-item">
+      <a href="#" class="btn btn-addbtn" role="button" id=addbtn3>+</a>
+    </li>
+</ul>
+</nav>
+</div>
+
+
+<div>																		<!-- Eighth and Ninenth div -->
+<nav class="navbar navbar-expand-sm"  id="ninenav">							
+<ul class="navbar-nav">
+ <li class="nav-item">
+      <a href="#" class="btn btn-info" role="button" id=hourly2>Hourly</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="btn btn-info" role="button" id=all2>All</a>
+    </li>
+</ul>
+</nav>
+</div>																		<!-- eight and nine div ends -->
+
+
+<div>																			<!-- ten and eleven div starts -->
+<nav class="navbar navbar-expand-sm" id="tennav">
+<ul class="navbar-nav">
+ <li class="nav-item">
+      <a href="#" class="btn btn-addbtn" role="button" id=addbtn4>+</a>
+    </li>
+</ul>
+</nav>
+</div>
+
+
+<div>																		<!-- ten and eleven div -->
+<nav class="navbar navbar-expand-sm"  id="elevennav">							
+<ul class="navbar-nav">
+ <li class="nav-item">
+      <a href="#" class="btn btn-info" role="button" id=hourly3>Hourly</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="btn btn-info" role="button" id=all3>All</a>
+    </li>
+</ul>
+</nav>
+</div>																		<!-- ten and eleven div ends -->
+
+
 
 
 <script>
@@ -135,55 +185,115 @@
   <script>
   $(document).ready(function(){												<!--vitals table-->
 	  $(".btn-info-vital").click(function(){ 
-		   $(".btn-info-vital").css("margin-top","-5px")
-		  $(".btn-info-vital").css("padding-bottom","70px")
-		  
-	    $("#thirdnav").slideDown("fast");
+		  $(".btn-info-vital").css("margin-top","-5px")
+          $(".btn-info-vital").css("padding-bottom","70px")
+		      $("#thirdnav").slideDown("fast");
 	  });
 	  
 	  $(".btn-info-graph").click(function(){									<!--graph-->
 		  $(".btn-info-vital").css("border-bottom","1.5px solid lightgray")
-		   $(".btn-info-vital").css("margin-top","0px")
+		  $(".btn-info-vital").css("margin-top","0px")
 		  $(".btn-info-vital").css("padding-bottom","0px")
-		    $("#thirdnav").slideUp("fast");
-		  $("#thirdnav").slideUp("fast");
-		  $("#fourthnav").slideUp("fast");
-		  $("#fifthnav").slideUp("fast");
-		  $("#sixthnav").slideUp("fast");
+		     $("#thirdnav").slideUp("fast");
+		     $("#thirdnav").slideUp("fast");
+		     $("#fourthnav").slideUp("fast");
+		     $("#fifthnav").slideUp("fast");
+		     $("#sixthnav").slideUp("fast");
+		     $("#seventhnav").slideUp("fast");
+		     $("#eightnav").slideUp("fast");
+		     $("#ninenav").slideUp("fast");
+		     $("#tennav").slideUp("fast");
+		     $("#elevennav").slideUp("fast");
+				 	$(".btn-cardiac").css("margin-top","0px")
+		   		    $(".btn-cardiac").css("padding-bottom","0px")
+		   		    $(".btn-respiratory").css("margin-top","0px")
+		   		    $(".btn-respiratory").css("padding-bottom","0px")
+		   		    $(".btn-neuro").css("margin-top","0px")
+		   		    $(".btn-neuro").css("padding-bottom","0px")
+		   		   	$(".btn-general").css("margin-top","0px")
+	                $(".btn-general").css("padding-bottom","0px");
 		  });
 	  
 	  
 	  $(".btn-general").click(function(){ 										<!--general click-->
-	       $(".btn-general").css("margin-top","-5px")
-		  $(".btn-general").css("padding-bottom","70px")
+	        $(".btn-general").css("margin-top","-5px")
+		    $(".btn-general").css("padding-bottom","70px")
 	 			$(".btn-cardiac").css("margin-top","0px")
 	   		    $(".btn-cardiac").css("padding-bottom","0px")
+	   		    $(".btn-respiratory").css("margin-top","0px")
+	   		    $(".btn-respiratory").css("padding-bottom","0px")
+	   		     $(".btn-neuro").css("margin-top","0px")
+	   		    $(".btn-neuro").css("padding-bottom","0px")
 	    $("#fourthnav").slideDown("fast");
 	    $("#fifthnav").slideDown("fast");
 	   			 $("#sixthnav").css("display","none")
 	   			 $("#seventhnav").css("display","none");
+	   			 $("#eightnav").css("display","none")
+	 	 	     $("#ninenav").css("display","none");
+	   			 $("#tennav").css("display","none")
+	   			 $("#elevennav").css("display","none");
 	  });
 	  
 	  
-	  $(".btn-cardiac").click(function(){									<!--graph-->
+	  $(".btn-cardiac").click(function(){									<!--cardiac click-->
 	  		$(".btn-general").css("border-bottom","1.5px solid lightgray")
-	   		$(".btn-general").css("margin-top","0px")
-	    $(".btn-general").css("padding-bottom","0px")
-	    $("#fourthnav").css("display","none")
-	    $("#fifthnav").css("display","none");
-	  
+	   		    $(".btn-general").css("margin-top","0px")
+	            $(".btn-general").css("padding-bottom","0px")
+	    	    $(".btn-respiratory").css("margin-top","0px")
+	   		    $(".btn-respiratory").css("padding-bottom","0px")
+	   		    $(".btn-neuro").css("margin-top","0px")
+	   		    $(".btn-neuro").css("padding-bottom","0px")
+	                $("#fourthnav").css("display","none")
+	                $("#fifthnav").css("display","none");
+	  	       	    $("#eightnav").css("display","none")
+	 	            $("#ninenav").css("display","none");
+	  		        $("#tennav").css("display","none")
+  			        $("#elevennav").css("display","none");
 	  });
-	    
-	    $(".btn-cardiac").click(function(){ 										<!--general click-->
-		  $(".btn-cardiac").css("margin-top","-5px")
-		  $(".btn-cardiac").css("padding-bottom","70px")
-	    $("#sixthnav").slideDown("fast");
-	    $("#seventhnav").slideDown("fast");
-	 
-	    
+	           $(".btn-cardiac").click(function(){ 										
+		           $(".btn-cardiac").css("margin-top","-5px")
+				   $(".btn-cardiac").css("padding-bottom","70px")
+	   		  $("#sixthnav").slideDown("fast");
+	          $("#seventhnav").slideDown("fast");
 	  });
 	  
+	   $(".btn-respiratory").click(function(){ 										<!--respiratory click-->
+	       $(".btn-respiratory").css("margin-top","-5px")
+		   $(".btn-respiratory").css("padding-bottom","70px")
+	 			$(".btn-cardiac").css("margin-top","0px")
+	   		    $(".btn-cardiac").css("padding-bottom","0px")
+	   		    $(".btn-neuro").css("margin-top","0px")
+	   		    $(".btn-neuro").css("padding-bottom","0px")
+	    $("#eightnav").slideDown("fast");
+	    $("#ninenav").slideDown("fast");
+	             $("#fourthnav").css("display","none")
+	   			 $("#fifthnav").css("display","none");
+	   			 $("#sixthnav").css("display","none")
+	   			 $("#seventhnav").css("display","none");
+	   		   	 $("#tennav").css("display","none")
+	   			 $("#elevennav").css("display","none");
+	  });
 	  
+	    
+	    $(".btn-neuro").click(function(){ 										<!--neutro click-->
+	       $(".btn-neuro").css("margin-top","-5px")
+		  $(".btn-neuro").css("padding-bottom","70px")
+	 			$(".btn-cardiac").css("margin-top","0px")
+	   		    $(".btn-cardiac").css("padding-bottom","0px")
+	   		    $(".btn-respiratory").css("margin-top","0px")
+	   		    $(".btn-respiratory").css("padding-bottom","0px")
+	   		    $(".btn-general").css("margin-top","0px")
+	   			 $(".btn-general").css("padding-bottom","0px")
+	    $("#tennav").slideDown("fast");
+	    $("#elevennav").slideDown("fast");
+	             $("#fourthnav").css("display","none")
+	   			 $("#fifthnav").css("display","none");
+	   			 $("#sixthnav").css("display","none")
+	   			 $("#seventhnav").css("display","none");
+	   			 $("#eightnav").css("display","none")
+	   			 $("#ninenav").css("display","none");
+	   });
+	    
 	});
   
   

@@ -30,7 +30,43 @@
 	width:170px;
 	height:60px;
 }
+#hourly2
+{
+	margin-left:10px; 
+	background-color:white;
+	color:black;
+	border:1.5px solid lightgray;	
+	width:170px;
+	height:60px;
+}
+#hourly3
+{
+	margin-left:10px; 
+	background-color:white;
+	color:black;
+	border:1.5px solid lightgray;	
+	width:170px;
+	height:60px;
+}
 #all1
+{
+	margin-left:5px; 
+	background-color:white;
+	color:black;
+	border:1.5px solid lightgray;	
+	width:170px;
+	height:60px;
+}
+#all2
+{
+	margin-left:5px; 
+	background-color:white;
+	color:black;
+	border:1.5px solid lightgray;	
+	width:170px;
+	height:60px;
+}
+#all3
 {
 	margin-left:5px; 
 	background-color:white;
@@ -78,6 +114,29 @@
 	font-size:20px;
 	margin-left:231px; 
 }
+#addbtn3
+{
+	background-color:#F0F0F0;
+	border:1.5px solid lightgray;	
+	width:70px;
+	height:40px;
+	color:black;
+	font-weight: 900;
+	font-size:20px;
+	margin-left:406px; 
+}
+
+#addbtn4
+{
+	background-color:#F0F0F0;
+	border:1.5px solid lightgray;	
+	width:70px;
+	height:40px;
+	color:black;
+	font-weight: 900;
+	font-size:20px;
+	margin-left:580px; 
+}
 #fourthnav
 {
 	display:none;
@@ -97,6 +156,28 @@
 	margin-top:-5px;
 }
 #seventhnav
+{
+	display:none; 
+}
+#eightnav
+{
+	display:none;
+	border-top:1px solid gray;	
+	display:none; 
+	margin-top:-5px;
+}
+#ninenav
+{
+	display:none; 
+}
+#tennav
+{
+	display:none;
+	border-top:1px solid gray;	
+	display:none; 
+	margin-top:-5px;
+}
+#elevennav
 {
 	display:none; 
 }
