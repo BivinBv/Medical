@@ -9,11 +9,12 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <Div id="div1">											                      <!--  pagination starts--> 
-   <nav class="navbar navbar-expand-sm bg-light">
+   <nav class="navbar navbar-expand-sm ">
   
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -39,25 +40,60 @@
 
 													     		 <!--pagination closes-->
 	
-<div>											     		
-<nav class="navbar navbar-expand-sm bg-light">
+<div>											     			<!-- Second div starts -->
+<nav class="navbar navbar-expand-sm " id="secnav">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a href="#" class="btn btn-info" role="button" id=pagntn>Vital Table</a>
+     <a href="#" class="btn btn-info-vital" role="button" id=btn>vital</a>  <!-- <a href="#" class="btn btn-info1" role="button" id=btn class="btn1" >Vital Table</a> -->
     </li>
     <li class="nav-item">
-     <a href="#" class="btn btn-info" role="button" id=pagntn>Graphs</a>
+     <a href="#" class="btn btn-info-graph" role="button" id=btn>Graphs</a>
     </li>
   </ul>
 </nav>
-</div>  
+</div>  														<!-- second div ends -->
 
+<div>
+<nav class="navbar navbar-expand-sm fixed" id="thirdnav" >
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a href="#" class="btn btn-info" role="button" id=btn>General</a>
+    </li>
+    <li class="nav-item">
+     <a href="#" class="btn btn-info" role="button" id=btn>cardiac</a>
+    </li>
+    <li class="nav-item">
+     <a href="#" class="btn btn-info" role="button" id=btn>Respiratory</a>
+    </li>
+    <li class="nav-item">
+     <a href="#" class="btn btn-info" role="button" id=btn>Neuro</a>
+    </li>
+  </ul>
+</nav>
+</div>
 
 <script>
   var today=new Date();
-  var date =(today.getDay()+1)+'/'+(today.getMonth()+1) +'/ '+
+  var date =(today.getDay()+1)+'/'+(today.getMonth()+1) +'/'+
   today.getFullYear();
   document.getElementById("currentDate").innerHTML=date;
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+	  $(".btn-info-vital").click(function(){ 
+		  $(".btn-info-vital").css("border-bottom","10px solid white")
+		   $(".btn-info-vital").css( "z-index","-2px")
+	    $("#thirdnav").slideDown("slow");
+	  });
+	  
+	  $(".btn-info-graph").click(function(){
+		    $("#thirdnav").slideUp();
+		  });
+	});
+  
+  
+  
   </script>
 </body>
 </html>
