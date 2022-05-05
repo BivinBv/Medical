@@ -107,7 +107,7 @@
 
 #thirdnav
 {
-	border-top:1px solid gray;	
+	border-top:1.5px solid lightgray;	
 	display:none; 
 	margin-top:-5px;
 }
@@ -160,8 +160,8 @@
 #fourthnav
 {
 	display:none;
-	margin-top:-5px;
-	border-top:1px solid gray;	
+	margin-top:px;
+	border-top:1.5px solid lightgray;	
 }
 #fifthnav
 {
@@ -171,7 +171,7 @@
 #sixthnav
 {
 	display:none;
-	border-top:1px solid gray;	
+	border-top:1.5px solid lightgray;	
 	display:none; 
 	margin-top:-5px;
 }
@@ -182,7 +182,7 @@
 #eightnav
 {
 	display:none;
-	border-top:1px solid gray;	
+	border-top:1.5px solid lightgray;	
 	display:none; 
 	margin-top:-5px;
 }
@@ -193,7 +193,7 @@
 #tennav
 {
 	display:none;
-	border-top:1px solid gray;	
+	border-top:1.5px solid lightgray;	
 	display:none; 
 	margin-top:-5px;
 }

@@ -1,8 +1,16 @@
 @charset "ISO-8859-1";
-th
+th,td
 {
-	border:1px solid black;
+	border:1px solid gray;
  }
+ #th
+ {
+ border-bottom:4px solid black;
+ }
+#td1
+{
+border-right:1px solid white
+}
  .tab1
  {
  display:none; 
@@ -12,6 +20,7 @@ th
  {
  display:none; 
  }
+
 #secnav
 {
 	border-bottom:-10px; 
