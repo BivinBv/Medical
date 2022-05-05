@@ -50,4 +50,24 @@ border-right:1px solid white
 {
 	margin-top:10px;
 }
+
+.modal-header
+{
+	background-color:lightgray;
+	height:20px;
+	
+}
+.modal-title
+{
+	font-size:medium;  
+}
+.modal-body
+{
+	height:400px;
+	overflow:hidden;
+	
+}
+.modal-body:hover{overflow-y:auto;}
+
+
  
