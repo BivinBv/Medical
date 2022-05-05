@@ -1,0 +1,44 @@
+@charset "ISO-8859-1";
+th
+{
+	border:1px solid black;
+ }
+ .tab1
+ {
+ display:none; 
+ }
+ 
+.tab2,.tab3,.tab4
+ {
+ display:none; 
+ }
+#secnav
+{
+	border-bottom:-10px; 
+	
+}
+#thirdnav
+{
+	margin-top:-10px;
+	position:static;
+	z-index:-1;  
+}
+#fourthnav
+{
+	position:static;
+	z-index:-1;
+	margin-top:-11px;
+	
+}
+#sixthnav,#eightnav,#tennav
+{
+	position:static;
+	z-index:-1;
+	margin-top:-11px;
+}
+
+.btn-general,.btn-cardiac,.btn-respiratory,.btn-neuro
+{
+	margin-top:10px;
+}
+ 
