@@ -197,7 +197,7 @@
   </tr>
   
   <tr style="border-bottom:1px solid light gray" >
-  <th style="width:30%">PUPILS</th>
+  <th style="width:30%;color:#cc0000">PUPILS</th>
     <td id=td1></td>
     <td id=td1></td>
     <td id=td1></td>
@@ -287,7 +287,7 @@
   </tr>
   
   <tr style="border-bottom:1px solid light gray" >
-  <th style="width:30%">PUPILS</th>
+  <th style="width:30%;color:#cc0000">PUPILS</th>
     <td id=td1></td>
     <td id=td1></td>
     <td id=td1></td>
@@ -377,7 +377,7 @@
   </tr>
   
   <tr style="border-bottom:1px solid light gray" >
-  <th style="width:30%">PUPILS</th>
+  <th style="width:30%;color:#cc0000">PUPILS</th>
     <td id=td1></td>
     <td id=td1></td>
     <td id=td1></td>
@@ -466,7 +466,7 @@
   </tr>
   
   <tr style="border-bottom:1px solid light gray" >
-  <th style="width:30%">PUPILS</th>
+  <th style="width:30%;color:#cc0000">PUPILS</th>
     <td id=td1></td>
     <td id=td1></td>
     <td id=td1></td>
@@ -565,7 +565,7 @@
          <tr>
          	<th style="border:none">
 			  <label for="date">Vitals: </label> </th>
-			<td style="border:none"> <input type="text" id="currentDate1" name="date" > <input type="text" id="currentTime" name="time"></td>
+			<td style="border:none"> <input type="text" id="currentDate2" name="Date" > <input type="text" id="Time1" name="Time"></td>
 		</tr>
 		<tr>
 			<th style="border:none"><label for="temp">Temp: </label></th>
@@ -703,7 +703,7 @@
          <tr>
          	<th style="border:none">
 			  <label for="date">Vitals: </label> </th>
-			<td style="border:none"> <input type="text" id="currentDate1" name="date" > <input type="text" id="currentTime" name="time"></td>
+			<td style="border:none"> <input type="text" id="currentDate3" name="date" > <input type="text" id="Time2" name="time1"></td>
 		</tr>
 		<tr>
 			<th style="border:none"><label for="temp">Temp: </label></th>
@@ -842,7 +842,7 @@
          <tr>
          	<th style="border:none">
 			  <label for="date">Vitals: </label> </th>
-			<td style="border:none"> <input type="text" id="currentDate1" name="date" > <input type="text" id="currentTime" name="time"></td>
+			<td style="border:none"> <input type="text" id="currentDate4" name="date" > <input type="text" id="Time3" name="time"></td>
 		</tr>
 		<tr>
 			<th style="border:none"><label for="temp">Temp: </label></th>
@@ -980,7 +980,7 @@
          <tr>
          	<th style="border:none">
 			  <label for="date">Vitals: </label> </th>
-			<td style="border:none"> <input type="text" id="currentDate1" name="date" > <input type="text" id="currentTime" name="time"></td>
+			<td style="border:none"> <input type="text" id="currentDate1" name="date" > <input type="text" id="Time4" name="Time"></td>
 		</tr>
 		<tr>
 			<th style="border:none"><label for="temp">Temp: </label></th>
@@ -1093,9 +1093,15 @@
   today.getFullYear();
   document.getElementById("currentDate").innerHTML=date;
   document.getElementById("currentDate1").value=date;
+  document.getElementById("currentDate2").value=date;
+  document.getElementById("currentDate3").value=date;
+  document.getElementById("currentDate4").value=date;
   
   var time = today.getHours() + ":" + today.getMinutes();
-  document.getElementById("currentTime").value = time;
+  document.getElementById("Time1").value = time;
+  document.getElementById("Time2").value = time;
+  document.getElementById("Time3").value = time;
+  document.getElementById("Time4").value = time;
   
   </script>
   
@@ -1130,6 +1136,11 @@
 		   		    $(".btn-neuro").css("padding-bottom","0px")
 		   		   	$(".btn-general").css("margin-top","0px")
 	                $(".btn-general").css("padding-bottom","0px");
+				 		   	  $(".tab1").css("display","none")
+						 	  $(".tab2").css("display","none")
+				    		  $(".tab3").css("display","none")
+				    		  $(".tab4").css("display","none");
+				 	
 		  });
 	  
 	  
@@ -1193,6 +1204,7 @@
 		   $(".btn-info-vital").css("border-bottom","5px solid white")<!--respiratory click-->
 		   $(".btn-cardiac").css("border-bottom","1.5px solid lightgray")
 		   $(".btn-general").css("border-bottom","1.5px solid lightgray")
+		   $(".btn-neuro").css("border-bottom","1.5px solid lightgray")
 	       $(".btn-respiratory").css("margin-top","2px")
 		   $(".btn-respiratory").css("padding-bottom","55px")
 	 			$(".btn-cardiac").css("margin-top","7px")
@@ -1247,13 +1259,15 @@
 		    }); 
 		    
 		    $(".btn-cardiactab").click(function(){ 	
+		    	 $(".btn-cardiactab").css("border-bottom","5px solid white")
 		    	 $(".tab2").slideDown("fast");
 			    	  $(".tab1").css("display","none")
 		    		  $(".tab3").css("display","none")
 		    		  $(".tab4").css("display","none");
 		    }); 
 		    
-		    $(".btn-respiratorytab").click(function(){ 	
+		    $(".btn-respiratorytab").click(function(){ 
+		    	$(".btn-respiratory").css("border-bottom","5px solid white")
 		    	 $(".tab3").slideDown("fast");
 				      $(".tab2").css("display","none")
 			    	  $(".tab1").css("display","none")
@@ -1261,11 +1275,14 @@
 		    }); 
 		    
 		    $(".btn-neurotab").click(function(){ 	
+		    	$(".btn-neuro").css("border-bottom","5px solid white")
 		    	 $(".tab4").slideDown("fast");
 				    	  $(".tab2").css("display","none")
 				    	  $(".tab1").css("display","none")
 				    	  $(".tab3").css("display","none");
 		    }); 
+		    
+		  
 	});																	<!--closing of function-->
   
   
