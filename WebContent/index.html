@@ -1119,6 +1119,7 @@
 	  });
 	  
 	  $(".btn-info-graph").click(function(){									<!--graph-->
+	  $(".btn-info-graph").css("height","67px")
 		  $(".btn-info-vital").css("margin-top","0px")
 		  $(".btn-info-vital").css("padding-bottom","0px")
 		  $(".btn-info-vital").css("border-bottom","1.5px solid lightgray")
@@ -1204,7 +1205,8 @@
 	    		  $(".tab4").css("display","none");
 	  });
 	  
-	   $(".btn-respiratory").click(function(){ 		
+	   $(".btn-respiratory").click(function(){ 	
+		   $(".btn-respiratory").css("border-bottom","5px solid white")
 		   $(".btn-info-vital").css("border-bottom","5px solid white")<!--respiratory click-->
 		   $(".btn-cardiac").css("border-bottom","1.5px solid lightgray")
 		   $(".btn-general").css("border-bottom","1.5px solid lightgray")
@@ -1257,6 +1259,7 @@
 	    
 		    $(".btn-gentab").click(function(){ 
 		    	 $(".btn-general").css("border-bottom","5px solid white")
+		    	  $(".btn-gentab").css("border-bottom","5px solid white")
 		    	  $(".tab-top-nav").slideDown("fast")
 		    	 $(".tab1").slideDown("fast")
 		    		  $(".tab2").css("display","none")
@@ -1276,6 +1279,7 @@
 		    $(".btn-respiratorytab").click(function(){ 
 		    	$(".tab-top-nav").slideDown("fast")
 		    	$(".btn-respiratory").css("border-bottom","5px solid white")
+		    	$(".btn-respiratorytab").css("border-bottom","5px solid white")
 		    	 $(".tab3").slideDown("fast");
 				      $(".tab2").css("display","none")
 			    	  $(".tab1").css("display","none")
@@ -1285,6 +1289,7 @@
 		    $(".btn-neurotab").click(function(){ 	
 		    	$(".tab-top-nav").slideDown("fast")
 		    	$(".btn-neuro").css("border-bottom","5px solid white")
+		    	$(".btn-neurotab").css("border-bottom","5px solid white")
 		    	 $(".tab4").slideDown("fast");
 				    	  $(".tab2").css("display","none")
 				    	  $(".tab1").css("display","none")
@@ -1294,6 +1299,7 @@
 		    btn-all1
 		    
 		    $(".btn-all1").click(function(){ 
+		    	$(".btn-gentab").css("border-bottom","1.5px solid lightgray")
 				  $(".tab1").css("display","none");
 		    }); 
 		    
@@ -1302,9 +1308,11 @@
 				  $(".tab2").css("display","none");
 		    });
 		    $("#all2").click(function(){ 
+		    	$(".btn-respiratorytab").css("border-bottom","1.5px solid lightgray")
 				  $(".tab3").css("display","none");
 		    });
 		    $("#all3").click(function(){ 
+		    	$(".btn-neurotab").css("border-bottom","1.5px solid lightgray")
 				  $(".tab4").css("display","none");
 		    });
 		  
