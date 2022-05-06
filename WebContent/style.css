@@ -1,24 +1,42 @@
 @charset "ISO-8859-1";
+
 #pagntn
 {
 	margin-left:10px; 
 	background-color:#F0F0F0;
 	color:black;
-	border:1.5px solid lightgray;
+	
 	
     background-color: #e3eaeb;
-    border-color: #dee8ea;
-    box-shadow: 0 0 0 0.25rem rgb(230 235 236 / 50%);
-
-	 	
+    
+   box-shadow: 2px 0px 2px 0px lightgrey;	
+    
+    border:2px solid lightgray; 	
 }
 
-#btn:focus, #btn:active {
+#btn:focus, #btn:active ,#hourly1:focus,#hourly1:active,#all1:focus,#all1:active{
  
    box-shadow:none!important;
    border-bottom:4px solid white;
+   margin-top:-7px;
+	height:67px;
    
 }
+#hourly2:focus,#hourly2:active,#all2:focus,#all2:active
+{
+	box-shadow:none!important;
+   border-bottom:4px solid white;
+   margin-top:-7px;
+	height:67px;
+}
+#hourly3:focus,#hourly3:active,#all3:focus,#all3:active
+{
+	box-shadow:none!important;
+   border-bottom:4px solid white;
+   margin-top:-7px;
+	height:67px;
+}
+
 #pagntn:active, #pagntn:focus
 {
 	border:none !important;

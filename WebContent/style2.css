@@ -11,6 +11,7 @@ th,td
 {
 border-right:1px solid white
 }
+
  .tab1
  {
  display:none; 
@@ -68,6 +69,12 @@ border-right:1px solid white
 	
 }
 .modal-body:hover{overflow-y:auto;}
+
+.tab1
+{
+	border-top:1px solid black;
+	margin-top:-10px;
+}
 
 
  
