@@ -555,7 +555,7 @@
         <!-- Modal body -->
         <div class="modal-body">
          
-         <form style="align-content:center " action="blank.html">
+         <form style="align-content:center " action="blank.html" method="post">
     
          <table align="center">
         
@@ -571,18 +571,27 @@
 			<td style="border:none"> <input type="text" id="currentDate2" name="Date" > <input type="text" id="Time1" name="Time"></td>
 		</tr>
 		<tr>
-			<th style="border:none"><label for="temp">Temp: </label></th>
+			<th style="border:none"><label for="temp" >Temp: </label></th>
 			<td style="border:none"> <input type="text" id=temp name="temp" >  <sup>o</sup>C </td>
+	<div class="alert alert-danger alert-dismissible" id=tempalert style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Temp</strong> Field is missing
+  </div>
+			
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="pulse">Pulse: </label></th>
 			<td style="border:none"> <input type="text" id=Pulse name="pulse" >  BPM </td>
+			<div class="alert alert-danger alert-dismissible" id=pulsealert style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Pulse</strong> Field is missing
+  </div>
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="SBP">S BP: </label></th>
-			<td style="border:none"> <input type="text" id=SBP name="SBP" >  mmHg </td>
+			<td style="border:none"> <input type="text" id="SBP" name="SBP" required>  mmHg </td>
 		</tr>
 		
 		<tr>
@@ -660,7 +669,7 @@
         <th style="border:none">
           <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-right:950px;background-color:lightgray;color:black ">Cancel</button>
           <td style="border:none">
-         <button type="submit" class="btn btn-secondary" style="background-color:lightgray;color:black " >submit</button></td>
+         <button type="submit" id="submit1" class="btn btn-secondary" style="background-color:lightgray;color:black " >submit</button></td>
          </form>
          </tr>
          </table>
@@ -694,7 +703,7 @@
         <!-- Modal body -->
         <div class="modal-body">
          
-         <form style="align-content:center " action="blank.html">
+         <form style="align-content:center " action="blank.html" method="post">
     
          <table align="center">
         
@@ -711,32 +720,37 @@
 		</tr>
 		<tr>
 			<th style="border:none"><label for="temp">S BP: </label></th>
-			<td style="border:none"> <input type="text" id=temp name="temp" >  <sup>o</sup>C </td>
+			<td style="border:none"> <input type="text" id="SBP1" name="temp" >  <sup>o</sup>C </td>
+			<div class="alert alert-danger alert-dismissible" id="SBPalert1" style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>SBP</strong> Field is missing
+  </div>
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="pulse">Weight: </label></th>
-			<td style="border:none"> <input type="text" id=Pulse name="pulse" >  Kg </td>
+			<td style="border:none"> <input type="text" id=Pulse name="pulse" required>  Kg </td>
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="SBP">Height: </label></th>
-			<td style="border:none"> <input type="text" id=SBP name="SBP" >   </td>
+			<td style="border:none"> <input type="text" id=SBP name="SBP" required>   </td>
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="DBP">D BP: </label></th>
-			<td style="border:none"> <input type="text" id="DBP" name="DBP" >  mmHg </td>
+			<td style="border:none"> <input type="text" id="DBP1" name="DBP" >  mmHg </td>
+	
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="RR">RR: </label></th>
-			<td style="border:none"> <input type="text" id="RR" name="RR" >  BPM </td>
+			<td style="border:none"> <input type="text" id="RR" name="RR" required>  BPM </td>
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="o2sat">O<sup>2</sup>Sat: </label></th>
-			<td style="border:none"> <input type="text" id="o2sat" name="o2sat" >  % </td>
+			<td style="border:none"> <input type="text" id="o2sat" name="o2sat" required >  % </td>
 		</tr>
 		
 		<tr>
@@ -799,7 +813,7 @@
         <th style="border:none">
           <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-right:950px;background-color:lightgray;color:black ">Cancel</button>
           <td style="border:none">
-         <button type="submit" class="btn btn-secondary" style="background-color:lightgray;color:black " >submit</button></td>
+         <button type="submit" id="submit2" class="btn btn-secondary" style="background-color:lightgray;color:black " >submit</button></td>
          </form>
          </tr>
          </table>
@@ -851,12 +865,15 @@
 		</tr>
 		<tr>
 			<th style="border:none"><label for="temp">Pulse: </label></th>
-			<td style="border:none"> <input type="text" id=temp name="temp" > BPM  </td>
+			<td style="border:none"> <input type="text" id="pulse" name="pulse" required> BPM  </td>
+   
+ 
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="pulse">Temp: </label></th>
-			<td style="border:none"> <input type="text" id=Pulse name="pulse" > <sup>o</sup>C</td>
+			<td style="border:none"> <input type="text" id="temp" name="pulse" > <sup>o</sup>C</td>
+				
 		</tr>
 		
 		<tr>
@@ -939,7 +956,7 @@
         <th style="border:none">
           <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-right:950px;background-color:lightgray;color:black">Cancel</button>
           <td style="border:none">
-         <button type="submit" class="btn btn-secondary" style="background-color:lightgray;color:black " >submit</button></td>
+         <button type="submit" id="submit3" class="btn btn-secondary" style="background-color:lightgray;color:black " >submit</button></td>
          </form>
          </tr>
          </table>
@@ -987,7 +1004,7 @@
 			<td style="border:none"> <input type="text" id="currentDate1" name="date" > <input type="text" id="Time4" name="Time"></td>
 		</tr>
 		<tr>
-			<th style="border:none"><label for="temp">Reaction L: </label></th>
+			<th style="border:none"><label for="temp" id="reactionl">Reaction L: </label></th>
 			<td style="border:none"> 
 		 <select id="country" name="country" style="width:190px">
  		 <option value="au"></option>
@@ -995,12 +1012,14 @@
   		<option value="usa"></option>
   		</select>
   		</td>
+  		
+  	
 		</tr>
 		
 		<tr>
 			<th style="border:none"><label for="pulse">Reaction R: </label></th>
 			<td style="border:none"> 
-		 <select id="country" name="country" style="width:190px">
+		 <select id="country" name="country" style="width:190px" required>
  		 <option value="au"></option>
  		 <option value="ca"></option>
   		<option value="usa"></option>
@@ -1021,7 +1040,11 @@
 		
 		<tr>
 			<th style="border:none"><label for="size l">Size L: </label></th>
-			<td style="border:none"> <input type="text" id="DBP" name="DBP" >  mm </td>
+			<td style="border:none"> <input type="text" id="size" name="DBP" >  mm </td>
+			<div class="alert alert-danger alert-dismissible" id="sizealert" style="display:none">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Size L</strong> Field is missing
+  </div>
 		</tr>
 		
 		<tr>
@@ -1153,7 +1176,7 @@
         <th style="border:none">
           <button type="button" class="btn btn-secondary" data-dismiss="modal" style="margin-right:950px;background-color:lightgray;color:black ">Cancel</button>
           <td style="border:none">
-         <button type="submit" class="btn btn-secondary"  style="background-color:lightgray;color:black ">submit</button></td>
+         <button type="submit" id="submit4" class="btn btn-secondary"  style="background-color:lightgray;color:black ">submit</button></td>
          
          </tr>
          </table>
@@ -1420,6 +1443,61 @@
 		    	$(".btn-neurotab").css("border-bottom","1.5px solid lightgray")
 				  $(".tab4").css("display","none");
 		    });
+		    
+		    $("#submit1").click(function()
+		    {
+		    	var temp=$("#temp").val(); 
+		    	var pulse=$("#pulse").val(); 
+		    	
+		    	var size=$("#size").val();
+		    	if(temp =="")
+		    		{
+		    		$("#tempalert").css("display","block");
+		    		return false;
+		    		}
+		    	if(pulse =="")
+	    		{
+	    		$("#pulsealert").css("display","block");
+	    		return false;
+	    		}
+		    	
+		    		
+		    	if(size=="")
+	    		{
+	    		$("#sizealert").css("display","block");
+	    		}
+		    	
+		    		
+		    });
+		    $("#submit2").click(function()
+				    {
+		    	var DBP=$("#DBP1").val();
+		    	var SBP=$("#SBP1").val();
+		    	if(SBP=="")
+	    		{
+	    		$("#SBPalert1").css("display","block");
+	    		return false
+	    		}
+		    	if(DBP=="")
+	    		{
+	    		alert("D BP field missing")
+	    		return false;
+	    		}
+	    	
+				    });
+		    
+		    $("#submit4").click(function()
+				    {
+		    	var size=$("#size").val();
+		    	
+		    	if(size=="")
+	    		{
+		    	$("#sizealert").css("display","block");
+	    		return false;
+	    		}
+	    	
+				    });
+				    
 		  
 	});																	<!--closing of function-->
   
